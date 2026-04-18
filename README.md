@@ -19,13 +19,13 @@ A convolutional neural network that recognises handwritten digits (0–9) from t
 
 ```
 mnist_project/
-├── train.py            ← Train the model
-├── predict.py          ← Run inference
-├── requirements.txt    ← Python dependencies
+├── train.py  <- Train the model
+├── predict.py <- Run inference
+├── requirements.txt <- Python dependencies
 ├── notebooks/
-│   └── exploration.ipynb   ← EDA + visualisations
-├── data/               ← MNIST downloads here (auto, git-ignored)
-└── models/             ← Saved weights (git-ignored)
+│   └── exploration.ipynb <- EDA + visualisations
+├── data/   <- MNIST downloads here (auto, git-ignored)
+└── models/  <- Saved weights (git-ignored)
 ```
 
 ---
@@ -41,7 +41,7 @@ cd mnist-classifier
 ### 2 · Create a virtual environment
 ```bash
 python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 ```
 
 ### 3 · Install dependencies
@@ -81,8 +81,8 @@ jupyter notebook notebooks/exploration.ipynb
 
 ```
 Input (1×28×28)
-  └─ Conv2d(1→32, k=3) + ReLU + MaxPool  →  32×14×14
-  └─ Conv2d(32→64, k=3) + ReLU + MaxPool →  64×7×7
+  └─ Conv2d(1→32, k=3) + ReLU + MaxPool  ->  32×14×14
+  └─ Conv2d(32→64, k=3) + ReLU + MaxPool -> 64×7×7
   └─ Flatten → Linear(3136→256) + ReLU + Dropout(0.5)
   └─ Linear(256→10)
 Output: logits for digits 0–9
